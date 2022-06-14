@@ -175,3 +175,22 @@ class Books(models.Model):
     author_name = models.CharField(max_length=20,default="")
 ```
 Here `book_id` is being used as a unique identifier to perform CRUD operation.
+
+# Screenshots
+#### signup page
+<img src='https://github.com/MdArbazkhan/library_management/blob/main/manage_lib/static/manage_lib/assets/signup_page.png' />
+
+#### login page
+<img src='https://github.com/MdArbazkhan/library_management/blob/main/manage_lib/static/manage_lib/assets/login_page.png' />
+
+#### login error alert page
+<img src='https://github.com/MdArbazkhan/library_management/blob/main/manage_lib/static/manage_lib/assets/login_error_alert.png' />
+
+#### book list page
+<img src='https://github.com/MdArbazkhan/library_management/blob/main/manage_lib/static/manage_lib/assets/book_list_dashboard.png' />
+
+#### add book page
+<img src='https://github.com/MdArbazkhan/library_management/blob/main/manage_lib/static/manage_lib/assets/add_book_Page.png' />
+
+#### update and delete book page
+<img src='https://github.com/MdArbazkhan/library_management/blob/main/manage_lib/static/manage_lib/assets/update_delete_book_page.png' />
