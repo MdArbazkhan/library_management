@@ -1,0 +1,35 @@
+{% extends 'manage_lib/base.html' %}
+{% load static %}
+
+{% block page_title_content %}
+<title>dashboard-books</title>
+{% endblock %}
+
+{% block css_content %}
+<link href="{% static 'manage_lib/dashboard.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block main_body_content %}
+<div class="books-table">
+  <h2 style="margin-bottom: 20px;">Available books</h2>
+  <table class="table">
+      <thead>
+      <tr>
+          <th scope="col">Book name</th>
+          <th scope="col">Author name</th>
+      </tr>
+      </thead>
+      <tbody>
+    
+      {% for obj in all_obj %}
+    
+      <tr>
+          <td><a href="{% url 'update-book-page' obj.book_id %}">{{ obj.book_name }}</a></td>
+          <td>{{ obj.author_name }}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+{% endblock %}
+

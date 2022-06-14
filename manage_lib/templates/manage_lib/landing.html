@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'manage_lib/landing.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="all-wrapper">
+            <div class="left-wrapper">
+                <h3>Welcome <br> to the <br> library management system</h3>
+            </div>
+
+            <div class="right-wrapper">
+                <div class="s-desc">
+                    <h3>If you are a new user, then</h3>
+                    <form action="{% url 'signup-page' %}">
+                        <button class="s-btn">Sign up</button>
+                    </form>
+                </div>
+                <div class="l-desc">
+                    <h3>If user already exists, then</h3>
+                    <form action="{% url 'login-page' %}">
+                        <button class="l-btn">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% extends 'manage_lib/base.html' %}
+{% load static %}
+
+{% block page_title_content %}
+<title>update-books</title>
+{% endblock %}
+
+{% block css_content %}
+<link href="{% static 'manage_lib/add-books.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block main_body_content %}
+<div class="new-books">
+  <h2 style="margin-bottom: 20px;">Add new books</h2>
+  <form action="{% url 'update-book-page' book_obj.book_id %}" method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="exampleInputEmail1">Book name</label>
+        <input type="text" name="book" value="{{ book_obj.book_name }}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Book name">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Author name</label>
+        <input type="text" name="author" value="{{ book_obj.author_name }}" class="form-control" id="exampleInputPassword1" placeholder="Author's name">
+      </div>
+      <button type="submit" class="btn btn-primary">Update book</button>
+  </form>
+  <form class="delete-form" action="{% url 'delete-book-page' book_obj.book_id %}" method="post">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-primary delete-btn">Delete book</button>
+  </form>
+</div>
+{% endblock %}

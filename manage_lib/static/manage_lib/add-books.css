@@ -1,0 +1,32 @@
+body {
+    padding-bottom: 20px;
+  }
+  
+.navbar {
+margin-bottom: 20px;
+}
+
+.btn-wrapper{
+    margin-left: 150px;
+    display: flex;
+}
+
+
+
+.new-books{
+    padding: 100px;
+}
+.form-group{
+    margin: 15px 0px;
+}
+.delete-form{
+    margin-top: 15px;
+}
+.delete-btn{
+    background-color: tomato;
+    border-color: tomato;
+}
+.delete-btn:hover{
+    background-color: rgb(240, 74, 45);
+    border-color: rgb(240, 74, 45);
+}
